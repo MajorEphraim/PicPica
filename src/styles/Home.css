@@ -1,0 +1,706 @@
+.App {
+    background-size:cover;
+    background-image: url('../pictures/backgrounds/landscape4.jpg');
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 100vh;
+  }
+
+  .app-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%
+  }
+    
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  /* @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+  
+  .empty-card {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    border-radius: 10%;
+  
+    /* transition: 0.6s; */
+  
+      position: relative;
+  }
+  
+  .card {
+    height: 120px;
+    width: 120px;
+    background-color: #192462;
+    border-radius: 10%;
+    position: absolute;
+    z-index: 1;
+    transition: 0.6s;
+  
+      /* position: relative; */
+  }
+  
+  /* .card:hover  {
+    transform: rotateY(180deg);
+  } */
+  
+  .picture {
+    border-radius: 10%;
+    position: absolute;
+    transition: 0.6s;
+  }
+  
+  /* .cards-container {
+    
+  } */
+  
+  .grouped-cards {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .instruction {
+    background-color: red;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size:14px;
+    width: 500px;
+    height: 50px;
+    font-weight: 50;
+  }
+  
+  .animal_name_container {
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size:16px;
+    width: 280px;
+    height: 40px;
+    font-weight: 50;
+  }
+  
+  .animal_name{
+    color: black;
+    font-size: 20px;
+  }
+  
+  .pick-animal {
+    /* padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 40px; */
+    color: white;
+    font-size: 18px;
+  }
+
+  .stake-input{
+    border:none;
+    background: none;
+    width: 60px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    /* margin-left: 2px; */
+    padding: 0;
+    padding-top: 4px;
+  }
+
+  .stake-amount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  h1 {
+    /* padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px; */
+    color: black;
+  }
+  
+  .text {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  
+  .outcome {
+    position:absolute;
+    top: 20%;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .level-coins{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .currency{
+    color: white;
+    font-size: 20px;
+  }
+  
+  .levels-coins-container{
+    width: 170px;
+    height: 46px;
+    background-color: black;
+    opacity: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .first-time{
+    position:absolute;
+    top: 20%;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .level-text{
+    color: black;
+    font-size: 45px;
+  }
+  
+  .attempt-text{
+    color: #ffffff;
+    font-size: 30px;
+  }
+
+  .first-attempt{
+    background-color: #075205;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    opacity: 0.9;
+  }
+  
+  .sec-attempt{
+    background-color: #491aaa;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    opacity: 0.8;
+  }
+  
+  .last-attempt{
+    background-color:#192462;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    opacity: 0.8;
+  }
+  
+  
+  .attempts-container{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .attempts-left{
+    z-index: -1;
+  }
+  
+  h6{
+    font-size: 10px;
+    margin: 5px;
+    color: white;
+  }
+  
+  h5{
+    font-size: 15px;
+    margin: 0;
+    color: white;
+  }
+  
+  .balance{
+    width: 170px;
+    height: 60px;
+    background-color: #24e011;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  .stake{
+    width: 170px;
+    height: 60px;
+    background-color: #1124e0;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 60px;
+  }
+  
+  .amounts{
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    justify-content:flex-start;
+    margin-bottom: 25px;
+    /* position: absolute;
+    left: 90px;
+    top:600px */
+    
+  }
+  
+  h3{
+    color: white;
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  h4{
+    color: white;
+    font-size: 15px;
+    margin: 6px;
+    font-weight: 155;
+  }
+  
+  .amount-won{
+    font-size: 20px;
+    color: white;
+  }
+  
+  input{
+    border:none;
+    background: none;
+    width: 60px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-left: 2px;
+  }
+  
+  .stake-amount{
+    display: flex;
+  }
+
+  .error-h{
+    color: red;
+    position: absolute;
+    top: 30px;
+  }
+
+
+  @media screen and (max-width: 400px) {
+    .App {
+      background-size:cover;
+      background-image: url('../pictures/backgrounds/landscape_mobile.jpg');
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* justify-content: space-between; */
+      height: 100vh;
+    }
+  
+    .app-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width:100%;
+      background-color:'red'
+    }
+
+
+    /* @keyframes App-logo-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    } */
+    
+    .empty-card {
+      /* height: 0.11hw;
+      width: 0.11hw;
+      margin: .03hw; */
+      border-radius: 10%;
+      transition: 0.6s;
+      position: relative;
+    }
+    
+    .card {
+      height: 100%;
+      width: 100%;
+      background-color: #192462;
+      border-radius: 10%;
+      position: absolute;
+      z-index: 1;
+      transition: 0.6s;
+    
+        /* position: relative; */
+    }
+    
+    /* .card:hover  {
+      transform: rotateY(180deg);
+    } */
+    
+    .picture {
+      border-radius: 10%;
+      position: absolute;
+      transition: 0.6s;
+    }
+    
+    /* .cards-container {
+      
+    } */
+    
+    .grouped-cards {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+    }
+    
+    .instruction {
+      background-color: red;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      /* font-size:14px; */
+      width:fit-content;
+      height:fit-content;
+      /* font-weight: 50; */
+      margin: 0;
+    }
+    
+    .animal_name_container {
+      background-color: white;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 4px;
+      width: 150px;
+      height: fit-content;
+      font-weight: 50;
+    }
+    
+    .animal_name{
+      color: black;
+      font-size: 11px;
+      font-weight: 550;
+      padding-top: 2.5px;
+      padding-bottom: 2.5px;
+    }
+    
+    .pick-animal {
+      /* padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 40px;
+      padding-right: 40px; */
+      color: white;
+      font-size: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .amount-heading{
+      font-size: 8px;
+      font-weight: 200;
+      margin: 0;
+    }
+
+    .amount-text, .currency, .stake-input{
+      font-size: 11px;
+    }
+
+  
+    .stake-input{
+      border:none;
+      background: none;
+      width: 60px;
+      /* font-size: 20px; */
+      color: white;
+      font-weight: bold;
+      /* margin-left: 2px; */
+      padding: 0;
+      /* padding-top: 4px; */
+    }
+  
+    .stake-amount{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    h1 {
+      /* padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px; */
+      color: black;
+    }
+    
+    .text {
+      width: 100%;
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+    }
+    
+    .outcome {
+      position:absolute;
+      top: 20%;
+      width: 400px;
+      height: 400px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+    
+    .level-coins{
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+      
+    .levels-coins-container{
+      width: 170px;
+      height: 46px;
+      background-color: black;
+      opacity: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+    
+    .first-time{
+      position:absolute;
+      top: 20%;
+      width: 400px;
+      height: 400px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+    
+    .level-text{
+      color: black;
+      font-size: 45px;
+    }
+    
+    .attempt-text{
+      color: #ffffff;
+      font-size: 30px;
+    }
+
+    .attempt-text1{
+      color: #ffffff;
+      font-size: 5px;
+    }
+  
+    .attempt-text2{
+      color: #ffffff;
+      font-size: 6px;
+    }
+    
+    .first-attempt{
+      background-color: #075205;
+      width: 50px;
+      height: 26px;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: .6%;
+      opacity: 0.9;
+    }
+    
+    .sec-attempt{
+      background-color: #491aaa;
+      width: 50px;
+      height: 26px;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: .6%;
+      opacity: 0.8;
+    }
+    
+    .last-attempt{
+      background-color:#192462;
+      width: 50px;
+      height: 26px;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: .6%;
+      opacity: 0.8;
+    }
+    
+    
+    .attempts-container{
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .attempts-left{
+      z-index: -1;
+    }
+    
+    h6{
+      font-size: 10px;
+      margin: 5px;
+      color: white;
+    }
+    
+    h5{
+      font-size: 15px;
+      margin: 0;
+      color: white;
+    }
+    
+    .balance{
+      background-color: #24e011;
+      border-radius: 10px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .stake{
+      width: 165px;
+      height: 28px;
+      background-color: #1124e0;
+      border-radius: 20px;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 60px;
+    }
+    
+    .amounts{
+      display: flex;
+      width: 60%;
+      flex-direction: row;
+      justify-content:space-between;
+      margin-bottom: 25px;
+      /* position: absolute;
+      left: 90px;
+      top:600px */
+      
+    }
+    
+    h3{
+      color: white;
+      margin: 0;
+      font-size: 20px;
+    }
+    
+    h4{
+      color: white;
+      font-size: 15px;
+      margin: 6px;
+      font-weight: 155;
+    }
+    
+    .amount-won{
+      font-size: 20px;
+      color: white;
+    }
+    
+    input{
+      border:none;
+      background: none;
+      /* width: 60px; */
+      font-size: 20px;
+      color: white;
+      font-weight: bold;
+      margin-left: 2px;
+    }
+    
+    .stake-amount{
+      display: flex;
+    }
+  
+    .error-h{
+      color: red;
+      position: absolute;
+      top: 30px;
+    }
+  
+  }

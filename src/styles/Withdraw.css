@@ -1,0 +1,176 @@
+.container-w{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    opacity: .6;
+    display: none;
+}
+
+.inner-container-w{
+    background-color: #ffffff;
+    width: 40%;
+    height: 50%;
+    position: absolute; 
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%); 
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.choose-method{
+    width: 30%;
+    height: 30px;
+    /* background-color: #3c56aa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#methods{
+    width: 100%;
+    height: 100%;
+    background-color: #3c56aa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+
+.enter-amount{
+    width: 40%;
+    height: 25px;
+    background-color: transparent;
+    border: #38d002 solid 2px;
+}
+
+.withdrawal-amount{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+
+}
+
+.text-amount{
+    color: #000;
+    font-weight: 300;
+}
+
+.enter-amount::placeholder{
+    color: #a3b0ba;
+    font-size: 17px;
+    font-weight: 535;
+}
+
+.confirm-action{
+    width: 30%;
+    height: 35px;
+    background-color: #38d002;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-text{
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.choose-text{
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.close-modal{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.lower-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+}
+
+.balance-text{
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.close-icon{
+    color: #000;
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.drop-icon{
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.banking-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 50%;
+    height: 28px;
+    border: #38d002 solid 2px;
+    border-radius: 10;
+    padding-left: 12px;
+    color: #000;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 2px;
+}
+
+input::placeholder{
+    color: #000;
+    font-size: 15px;
+    font-weight: lighter;
+    opacity: .5;
+}
+
+.error-w{
+    color: red;
+}
+
+.loading-w{
+    color: #000;
+}
+
+.resp-w{
+    color: #38d002;
+}

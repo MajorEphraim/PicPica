@@ -1,0 +1,69 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #dddddd;
+}
+
+.inner-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: #ffffff;
+    width: 80%;
+    height: 70%;
+    border-radius: 0%;
+    margin-bottom: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-card-register{
+    height: 800px;
+    width: 30%;
+    background-color: #192462;
+    border-radius: 10px;
+    /* justify-content: space-between; */
+}
+
+.invisible-card{
+    width: 100%;
+    /* height: 600px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.register-input{
+    width: 95%;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: black;
+    font-size: 13px;
+}
+
+.register-text{
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.register-btn{
+    background-color:#46d33c;
+    /* border-radius: 5px; */
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.ts-cs{
+    color: black;
+    font-size:small;
+}

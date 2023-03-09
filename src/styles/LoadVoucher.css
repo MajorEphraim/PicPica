@@ -1,0 +1,114 @@
+.container{
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    opacity: .6;
+    display: none;
+}
+
+.inner-container{
+    background-color: #ffffff;
+    width: 40%;
+    height: 40%;
+    position: absolute; 
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%); 
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.choose-voucher, .vouchers{
+    width: 29%;
+    height: 18%;
+    background-color: #3c56aa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.enter-voucher{
+    width: 80%;
+    height: 17%;
+    background-color: transparent;
+    border-radius: 25px;
+    border: #38d002 solid 4px;
+    padding-left: 10px;
+    color: #000;
+    font-size:18px;
+    letter-spacing: 25px;
+}
+
+.enter-voucher::placeholder{
+    color: #a3b0ba;
+    font-size: 17px;
+    font-weight: 535;
+    letter-spacing: normal;
+}
+
+.load-voucher{
+    width: 30%;
+    height: 20%;
+    background-color: #38d002;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-text{
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.choose-text{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.close-modal{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.lower-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+}
+
+.balance-text{
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.close-icon{
+    color: #000;
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.drop-icon{
+    color: #ffffff;
+    font-size: 22px;
+}

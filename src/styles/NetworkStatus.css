@@ -1,0 +1,13 @@
+.network-status{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.network-text{
+    color: black;
+    font-size: 10px;
+}
