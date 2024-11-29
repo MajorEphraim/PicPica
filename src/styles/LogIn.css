@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #dddddd;
+}
+
+.inner-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better design */
+}
+
+.inner-card {
+    height: 250px;
+    width: 40%; /* Increased for spacing */
+    background-color: #192462;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.invisible-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.register-input {
+    width: 90%;
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: black;
+}
+
+.login-btn {
+    background-color: #46d33c;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Hover animation */
+}
+
+.login-btn:hover {
+    background-color: #3bb02d;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}

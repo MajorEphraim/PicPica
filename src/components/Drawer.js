@@ -21,24 +21,25 @@ const Drawer =()=>{
         innerContainer.style.display = 'block'
     }
 
-    const openWithdrawModal = ()=>{
-        const container = document.getElementById('container-w')
-        const innerContainer = document.getElementById('inner-container-w')
+    // const openWithdrawModal = ()=>{
+    //     const container = document.getElementById('container-w')
+    //     const innerContainer = document.getElementById('inner-container-w')
 
-        container.style.display = 'block'
-        innerContainer.style.display = 'block'
-    }
+    //     container.style.display = 'block'
+    //     innerContainer.style.display = 'block'
+    // }
 
 
     return(
-        <div className='drawer' id='drawer'>
+        <div className='drawer' id='drawer'
+        >
             <div className='upper-container'>
 
                 <div className='buttons'>
                     <div className='btn1' onClick={openLoadModal}>
                         <h1 className='btn-text1'>Load Voucher</h1>
                     </div>
-                    <div className='btn2' onClick={openWithdrawModal}>
+                    <div className='btn2'>
                         <h1 className='btn-text2'>Withdraw</h1>
                     </div>
                 </div>

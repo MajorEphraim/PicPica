@@ -29,7 +29,7 @@ const NavBarHome =({attemptsLeft, isDemo, reset})=>{
  
     const [isDisplayed, setIsDisplayed] = useState(false)
     const windowSize = useSelector(state=>state.windowState.windowSize)
-    const windowWidth = windowSize.innerWidth
+    const windowWidth = windowSize.windowWidth
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -89,6 +89,14 @@ const NavBarHome =({attemptsLeft, isDemo, reset})=>{
         }
     }
 
+    const openWithdrawModal = ()=>{
+        const container = document.getElementById('container-w')
+        const innerContainer = document.getElementById('inner-container-w')
+
+        container.style.display = 'block'
+        innerContainer.style.display = 'block'
+    }
+
     const changeMode = ()=>{
         if (isDemo) {
             navigate('/')
@@ -96,29 +104,32 @@ const NavBarHome =({attemptsLeft, isDemo, reset})=>{
             navigate('/demo')
         }
     }
-
     const height = windowWidth > 400 ? null:.068*windowWidth
     const width = height
     const menuMargin = windowWidth > 400 ? null:.04*windowWidth
-    const icon1Style = windowWidth > 400 ? {color:'#491aaa', padding:0}:{color:'#491aaa', padding:0, fontSize:.035*windowWidth}
-    const resetStyle = windowWidth > 400 ? {color:'#491aaa', margin:0,}:{color:'#491aaa', margin:0, fontSize:.012*windowWidth}
+
+    const icon1Style = windowWidth && windowWidth > 400 ? {color:'#491aaa', padding:0}:{color:'#491aaa', padding:0, fontSize:parseInt(.035*windowWidth)}
+    const resetStyle = windowWidth && windowWidth > 400 ? {color:'#491aaa', margin:0,}:{color:'#491aaa', margin:0, fontSize:parseInt(.012*windowWidth)}
 
     return(
         <div className='bar-home' style={{}}>
         
-                        <div className='icon-menu'>
-                            {
-                                isOpened ? <BiX className='menu' onClick={triggerCloseDrawer}/> : <HiMenu className='menu' onClick={ !isDemo ? triggerOpenDrawer:null } style={!isDemo ? {color:'#ffffff', height,width } : {color:'transparent', height,width, margin:menuMargin}}/>
-                            }
+                        <div className='icon-menu'  >
+                            <div onClick={openWithdrawModal}>
+{
+
+                            isOpened ? <BiX className='menu' onClick={triggerCloseDrawer}/> : <HiMenu  className='menu' style={!isDemo ? {color:'#ffffff', height,width } : {color:'transparent', height,width, margin:menuMargin}}/>
+}
+                            </div>
                             
                             <img src={icon} className="icon" style={windowWidth > 400 ? {}:{height:.068*windowWidth, width:.068*windowWidth}}/>
                             {
                                 isDemo ? (
                                     <>
-                                        <div className='demo-mode' style={windowWidth > 400 ? {}:{height:.045*windowWidth, width:.06*windowWidth}}>
-                                            <h1 className='demo-text' style={windowWidth > 400 ? {}:{fontSize:.015*windowWidth, fontWeight:700}}>DEMO</h1>
+                                        <div className='demo-mode' style={windowWidth && windowWidth > 400 ? {}:{height:.045*windowWidth, width:.06*windowWidth}}>
+                                            <h1 className='demo-text' style={windowWidth && windowWidth > 400 ? {}:{fontSize:parseInt(.015*windowWidth), fontWeight:700}}>DEMO</h1>
                                         </div>
-                                        <div onClick={()=>reset()} className='refresh-btn' style={windowWidth > 400 ? {width:"55px", borderRadius: "10px", height: "fit-content",backgroundColor:'#ffffff',display:'flex', flexDirection:'column', alignItems:'center'}:{height:.045*windowWidth,width:.06*windowWidth ,fontWeight:700, backgroundColor:'#ffffff', display:'flex', flexDirection:'column', alignItems:'center'}}>
+                                        <div onClick={()=>reset()} className='refresh-btn' style={windowWidth && windowWidth > 400 ? {width:"55px", borderRadius: "10px", height: "fit-content",backgroundColor:'#ffffff',display:'flex', flexDirection:'column', alignItems:'center'}:{height:.045*windowWidth,width:.06*windowWidth ,fontWeight:700, backgroundColor:'#ffffff', display:'flex', flexDirection:'column', alignItems:'center'}}>
                                             <BiRefresh className='refresh-icon' style={icon1Style}/>
                                             <h6 className='refresh-btn-txt' style={resetStyle}>Reset</h6>
                                         </div>
@@ -131,9 +142,9 @@ const NavBarHome =({attemptsLeft, isDemo, reset})=>{
                                 )
                             }
                         </div>
-                        <h1 className='attempt-left' style={windowWidth > 400 ? {}:{fontSize:.031*windowWidth}}>{attemptsLeft}</h1>
-                        <div className='right-content' style={windowWidth > 400 ? {}:{width:'fit-content'}}>
-                        <BiRepost className='mode-icon' onClick={token == null ? null : changeMode} style={{color :token == null ? 'transparent' : '#ffffff', fontSize:windowWidth > 400 ? null:.06*windowWidth, margin:windowWidth > 400 ? null:0}}/>
+                        <h1 className='attempt-left' style={windowWidth && windowWidth > 400 ? {}:{fontSize:parseInt(.031*windowWidth)}}>{attemptsLeft}</h1>
+                        <div className='right-content' style={windowWidth && windowWidth > 400 ? {}:{width:'fit-content'}}>
+                        <BiRepost className='mode-icon' onClick={token == null ? null : changeMode} style={{color :token == null ? 'transparent' : '#ffffff', fontSize:windowWidth && windowWidth > 400 ? 0 : parseInt(.06 * windowWidth), margin:windowWidth > 400 ? null:0}}/>
                         {isDemo ? (hasAccount()):<UserDetails showUserDetails={showUserDetails}/>}
                         </div>
         </div>

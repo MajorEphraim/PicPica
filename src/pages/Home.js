@@ -267,6 +267,7 @@ function Home() {
         return
       },2200)
 
+
       setTimeout(()=>{
         setIsAnimating(false)
       },2700)
@@ -276,7 +277,7 @@ function Home() {
     setClicked(!clicked)
     setAttempt(prevState=>prevState+1) 
   }
-  
+
   const updateStake =(val)=>{
     setErrorMsg(null)
     setStake(val)
@@ -399,7 +400,7 @@ function Home() {
             animals
             .filter((item,index)=>index<4)
             .map(item=>(
-              <div style={{border:isShown && item.name == animal ?'red 2px solid' : 'none'}} className='empty-card' id={item.id} onClick={()=>chooseAnimal(item.id, item.name)}>
+              <div key={item.id} style={{border:isShown && item.name == animal ?'red 2px solid' : 'none'}} className='empty-card' id={item.id} onClick={()=>chooseAnimal(item.id, item.name)}>
                   <img className='picture' src={item.source} id={'pic'+item.id} height={'100%'} width={'100%'}/>
                   <div className='card' id={'card'+item.id}/>
                 
@@ -414,7 +415,7 @@ function Home() {
           animals
           .filter((item,index)=>index>3 && index<8)
           .map(item=>(
-            <div style={{border:isShown && item.name == animal ?'red 2px solid' : 'none'}} className='empty-card' id={item.id} onClick={()=>chooseAnimal(item.id, item.name)}>
+            <div  key={item.id} style={{border:isShown && item.name == animal ?'red 2px solid' : 'none'}} className='empty-card' id={item.id} onClick={()=>chooseAnimal(item.id, item.name)}>
                 <img className='picture' src={item.source} id={'pic'+item.id} height={'100%'} width={'100%'}/>
                 <div className='card' id={'card'+item.id}/>
             </div>
@@ -427,7 +428,7 @@ function Home() {
           animals
           .filter((item,index)=>index>7)
           .map(item=>(
-            <div style={{border:isShown && item.name == animal ?'red 2px solid' : 'none'}} className='empty-card' id={item.id} onClick={()=>chooseAnimal(item.id,item.name)}>
+            <div key={item.id} style={{border:isShown && item.name == animal ?'red 2px solid' : 'none'}} className='empty-card' id={item.id} onClick={()=>chooseAnimal(item.id,item.name)}>
                 <img className='picture' src={item.source} id={'pic'+item.id} height={'100%'} width={'100%'}/>
                 <div className='card' id={'card'+item.id}/>
             </div>

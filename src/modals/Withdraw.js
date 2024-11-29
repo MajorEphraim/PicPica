@@ -131,7 +131,7 @@ const Withdraw = ()=>{
                         {/* {isOpened ? null : <option value={"choose-voucher"} className="choose-text">Choose voucher</option>} */}
                         <option value="Choose payment method" className="choose-text">Choose payment method</option>
                         {
-                            methodsList.map(item=><option value={item} className="choose-text">{item}</option>)
+                            methodsList.map(item=><option key={item} value={item} className="choose-text">{item}</option>)
                         }
                     </select>
                 </div>

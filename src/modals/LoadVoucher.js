@@ -44,7 +44,7 @@ const LoadVoucher = ()=>{
                         {/* {isOpened ? null : <option value={"choose-voucher"} className="choose-text">Choose voucher</option>} */}
                         <option value="" className="choose-text">Choose voucher</option>
                         {
-                            voucherList.map(item=><option key={item.id} value={item} className="choose-text">{item}</option>)
+                            voucherList.map(item=><option key={item} value={item} className="choose-text">{item}</option>)
                         }
                     </select>
                 {/* </div> */}

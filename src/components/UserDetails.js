@@ -6,7 +6,7 @@ const UserDetails = ({showUserDetails})=>{
     const name = useSelector(state=>state.accountState.username)
     const profilePic = useSelector(state=>state.accountState.profilePic)
     const windowSize = useSelector(state=>state.windowState.windowSize)
-    const windowWidth = windowSize.innerWidth
+    const windowWidth = windowSize.windowWidth
 
     return(
         <div onClick={()=>showUserDetails()} className='user-details' style={windowWidth > 400 ? {}:{margin:.014*windowWidth}}>
